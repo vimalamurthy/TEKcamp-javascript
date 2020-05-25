@@ -49,10 +49,14 @@ console.log("The string is : " +myString);
 //problem as well as the toString() method to convert a number into a string and reverse() method to reverse an array in place.
 
 //your code...
-
-
-
-
+function reverseNum(phoneNumber){
+    var strPhNum = phoneNumber.toString();
+    var arrPhNum= strPhNum.split("");
+    var reverseNum = arrPhNum.reverse();
+    return(reverseNum.join(""));
+}
+var acceptNum=prompt("Enter the phone number without spaces: ");
+console.log(reverseNum(acceptNum));
 
 /************************************************************* */
 // Problem 5:
