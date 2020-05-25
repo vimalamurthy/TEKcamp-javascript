@@ -60,19 +60,25 @@ console.log(reverseNum(acceptNum));
 
 /************************************************************* */
 // Problem 5:
-// Write a JavaScript function creates a car object using information about your car. Include the make, model, year, and color. Write a function to get the year, color, make, and model in that order.
+// Write a JavaScript function creates a car object using information about your car. Include the make, model, year, and 
+// color. Write a function to get the year, color, make, and model in that order.
 
 //your code...
-
-
-
-
-
+var car ={
+    make: 'BMW',
+    model:'525',
+    year: 2019,
+    color:'red',
+    getCar: function(){
+        console.log(this);
+    }
+};
+car.getCar();
 
 /************************************************************* */
 // Problem 6:
-// Write a JavaScript function with a loop that will iterate from 0 to 15. Each iteration, the for loop will check if the current number is odd or even and display the output.
-
+// Write a JavaScript function with a loop that will iterate from 0 to 15. Each iteration, the for loop will check if the 
+// current number is odd or even and display the output.
 
 //your code...
 
