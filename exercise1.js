@@ -81,16 +81,33 @@ car.getCar();
 // current number is odd or even and display the output.
 
 //your code...
-
-
-
+for (var num=0; num<=15; num++){
+    if ((num%2) == 0)
+        console.log(num +" is an even number");
+    else
+        console.log(num +" is an odd number");
+}
 
 /************************************************************* */
 // Problem 7:
-// Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
+// Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the 
+// number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
-
+for (var num=1; num<=100; num++){
+    if(((num%3)==0) && ((num%5)==0)){
+        console.log("TEKcamp");
+    }
+    else if ((num%5) == 0){
+        console.log("Camp");
+    }
+    else if ((num%3)==0){
+        console.log("TEK");
+    }
+    else{
+        console.log(num);
+    }
+}
 
 /************************************************************* */
 // Problem 8:
