@@ -126,6 +126,8 @@ for (var num=0; num<=10; ){
 const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to 
 //the console.
+var school = Object.values(foodArray[foodArray.length -1]);
+console.log(school);
 
 const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
 // Using both nameArray and adjectiveArray, make a
