@@ -6,9 +6,15 @@
 // Part 2: Write another funciton that converts the Celsius temperature back to Fahrenheit. 
 
 //your code...
+//Part 1 - Farenheit to Celsius
+var farenheit = prompt("Enter farenheit temperature: ");
+var celsius = (farenheit-32)*5/9;
+console.log(farenheit +" F is : " +celsius + " C");
 
-
-
+//Part 2 - Celsius to farenheit
+var celsius1 = prompt("Enter Celsius temperature");
+var farenheit1= (celsius*9/5)+32;
+console.log(celsius1 +" C is : " +farenheit1 + " F");
 
 
 
