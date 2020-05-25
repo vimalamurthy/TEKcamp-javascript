@@ -16,16 +16,19 @@ var celsius1 = prompt("Enter Celsius temperature");
 var farenheit1= (celsius*9/5)+32;
 console.log(celsius1 +" C is : " +farenheit1 + " F");
 
-
-
 /************************************************************* */
 // Problem 2:
-// Write a JavaScript function to determine if someone is old enough to vote. Declare a variable for age and write a conditional statement for whether that age is old enough to vote. Console log "yes" or "no"
+// Write a JavaScript function to determine if someone is old enough to vote. Declare a variable for age and write a conditional statement 
+//for whether that age is old enough to vote. Console log "yes" or "no"
 
 //your code...
-
-
-
+var age=prompt("Whats your age: " )
+if (age >= 18){
+    console.log("You can vote..")
+}
+else{
+    console.log("You can't vote yet..")
+}
 
 
 
