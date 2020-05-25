@@ -117,17 +117,23 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
-
-
+for (var num=0; num<=10; ){
+    console.log(num);
+    num=num+3;
+}
 
 // Problem 9:
 const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];
-//access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
+//access the value of the last element of the array and set it to a variable called school.  print the school variable to 
+//the console.
 
 const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
 // Using both nameArray and adjectiveArray, make a
 // "for" loop that console.log()'s a sentence for each
-// corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
+// corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  
+// "Potatoes are salty", "Lemon is sour".
+
+
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
