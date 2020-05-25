@@ -8,12 +8,12 @@
 //your code...
 //Part 1 - Farenheit to Celsius
 var farenheit = prompt("Enter farenheit temperature: ");
-var celsius = (farenheit-32)*5/9;
+var celsius = (farenheit-32)*(5/9);
 console.log(farenheit +" F is : " +celsius + " C");
 
 //Part 2 - Celsius to farenheit
 var celsius1 = prompt("Enter Celsius temperature");
-var farenheit1= (celsius*9/5)+32;
+var farenheit1= (celsius*(9/5))+32;
 console.log(celsius1 +" C is : " +farenheit1 + " F");
 
 /************************************************************* */
@@ -30,24 +30,23 @@ else{
     console.log("You can't vote yet..")
 }
 
-
-
-
 /************************************************************* */
 // Problem 3:
-// Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
+// Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." 
+//Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you 
+//have finished, use the join() method to change the array back into a string.
 
 //your code...
-
-
-
-
-
-
+var myString= "The five boxing wizards jump quickly.";
+var myArray = myString.split(" ");
+console.log("The Array is : " +myArray);
+myString=myArray.join(" ");
+console.log("The string is : " +myString);
 
 /************************************************************* */
 // Problem 4:
-// Write a JavaScript function with a function that reverses your telephone number. Use the split() and join() methods from the previous problem as well as the toString() method to convert a number into a string and reverse() method to reverse an array in place.
+// Write a JavaScript function with a function that reverses your telephone number. Use the split() and join() methods from the previous 
+//problem as well as the toString() method to convert a number into a string and reverse() method to reverse an array in place.
 
 //your code...
 
