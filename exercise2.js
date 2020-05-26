@@ -25,11 +25,11 @@ while (i<10){
 function product(){
     return ((2+30)*20);
 }
-let x = product();
+
 function product1(a){
     return (a/10**2);
 }
-console.log(product1(x));
+console.log("The result is : " +product1(product()));
 
 
 /************************************************************* */
@@ -50,76 +50,41 @@ console.log(product1(x));
 // undefined
 // ""
 var value = 20;
-if (value)
-    console.log(`${value} is truthy - value of 20 assigned is truthy`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - value of 20 assigned is truthy`);
 
 value=0;
-if (value)
-    console.log(`${value} is truthy`);
-else
-    console.log(`${value} is falsy - value of 0 is falsy`);
+console.log(`${value} is falsy - value of 0 is falsy`);
 
 value="zero";
-if (value)
-    console.log(`${value} is truthy - "zero" is a string`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - "zero" is a string`);
     
 const zero = 20;
-if (zero)
-    console.log(`${value} is truthy - 20 is the value of constant named zero`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - 20 is the value of constant named zero`);
 
 value=null;
-if (value)
-    console.log(`${value} is truthy`);
-else
-    console.log(`${value} is falsy - null is falsy`);
+console.log(`${value} is falsy - null is falsy`);
     
 value="0";
-if (value)
-    console.log(`${value} is truthy ="0" is a string`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy ="0" is a string`);
 
 value= !"";
-if (value)
-    console.log(`${value} is truthy - Empty string returns falsy, so the !"" Boolean returns true.`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - Empty string returns falsy, so the !"" Boolean returns true.`);
 
 value={};
-if (value)
-    console.log(`${value} is truthy - Object is assigned to value`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - Object is assigned to value`);
 
 value = () => {console.log("hello TEKcamp!");}
-if (value)
-    console.log(`${value} is truthy - Function return value is assigned to value`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - Function return value is assigned to value`);
 
 value=125;
-if (value)
-    console.log(`${value} is truthy - Assigning a value to the variable`);
-else
-    console.log(`${value} is falsy`);
+console.log(`${value} is truthy - Assigning a value to the variable`);
 
 value=undefined;
-if (value)
-    console.log(`${value} is truthy`);
-else
-    console.log(`${value} is falsy - undefined is falsy`);
+console.log(`${value} is falsy - undefined is falsy`);
 
 value="";
-if (value)
-    console.log(`${value} is truthy`);
-else
-    console.log(`${value} is falsy - Empty string is falsy`);
+console.log(`${value} is falsy - Empty string is falsy`);
+
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:
