@@ -8,7 +8,6 @@ for(let i=0; i<10; i++) {
     console.log(" the value of i in the loop is : " + i);
 }
 
-
 //your code...
 let i=0;
 while (i<10){
@@ -28,7 +27,7 @@ function product(){
 }
 let x = product();
 function product1(a){
-    return ((a/10)**2);
+    return (a/10**2);
 }
 console.log(product1(x));
 
@@ -50,10 +49,77 @@ console.log(product1(x));
 // 125
 // undefined
 // ""
+var value = 20;
+if (value)
+    console.log(`${value} is truthy - value of 20 assigned is truthy`);
+else
+    console.log(`${value} is falsy`);
 
+value=0;
+if (value)
+    console.log(`${value} is truthy`);
+else
+    console.log(`${value} is falsy - value of 0 is falsy`);
 
+value="zero";
+if (value)
+    console.log(`${value} is truthy - "zero" is a string`);
+else
+    console.log(`${value} is falsy`);
+    
+const zero = 20;
+if (zero)
+    console.log(`${value} is truthy - 20 is the value of constant named zero`);
+else
+    console.log(`${value} is falsy`);
 
+value=null;
+if (value)
+    console.log(`${value} is truthy`);
+else
+    console.log(`${value} is falsy - null is falsy`);
+    
+value="0";
+if (value)
+    console.log(`${value} is truthy ="0" is a string`);
+else
+    console.log(`${value} is falsy`);
 
+value= !"";
+if (value)
+    console.log(`${value} is truthy - Empty string returns falsy, so the !"" Boolean returns true.`);
+else
+    console.log(`${value} is falsy`);
+
+value={};
+if (value)
+    console.log(`${value} is truthy - Object is assigned to value`);
+else
+    console.log(`${value} is falsy`);
+
+value = () => {console.log("hello TEKcamp!");}
+if (value)
+    console.log(`${value} is truthy - Function return value is assigned to value`);
+else
+    console.log(`${value} is falsy`);
+
+value=125;
+if (value)
+    console.log(`${value} is truthy - Assigning a value to the variable`);
+else
+    console.log(`${value} is falsy`);
+
+value=undefined;
+if (value)
+    console.log(`${value} is truthy`);
+else
+    console.log(`${value} is falsy - undefined is falsy`);
+
+value="";
+if (value)
+    console.log(`${value} is truthy`);
+else
+    console.log(`${value} is falsy - Empty string is falsy`);
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:
@@ -123,7 +189,8 @@ if (age > 65) console.log("retired"); else {
 (age>65) ? console.log("retired") : console.log("still working...");
 
 /************************************************************* */
-// Problem 6: Create an object literal that represents yourself.  set it to a variable that appropriately describes the object.  Include the following properties:
+// Problem 6: Create an object literal that represents yourself.  set it to a variable that appropriately describes the object.  
+//Include the following properties:
 /*
 -name
 -age
@@ -134,14 +201,17 @@ if (age > 65) console.log("retired"); else {
 
 -add a method on your object, named learn. the learn method should print the value of the name property using the 'this' keyword.
 
--add another method on your object of any action you want to perform, using some property that exists on your object, making sure to utilize the 'this' keyword.
+-add another method on your object of any action you want to perform, using some property that exists on your object, making sure to utilize 
+the 'this' keyword.
 */
 
 //your code...
 
 
 /************************************************************* */
-// Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
+// Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of 
+//properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back 
+//to one of the properties you defined on this object literal.  
 
 //your code...
 

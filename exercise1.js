@@ -130,16 +130,49 @@ var school = Object.values(foodArray[foodArray.length -1]);
 console.log(school);
 
 const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
-// Using both nameArray and adjectiveArray, make a
-// "for" loop that console.log()'s a sentence for each
+// Using both nameArray and adjectiveArray, make a "for" loop that console.log()'s a sentence for each
 // corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  
 // "Potatoes are salty", "Lemon is sour".
 
-
+for (var i=0; i<=foodArray.length-1; i++){
+    if (typeof foodArray[i] === 'object'){
+        var temp= (foodArray[i].school);
+        if (temp.charAt(temp.length-1) !=='s')
+            console.log(temp+" is " +adjectiveArray[i]);
+        else
+            console.log(temp+" are " +adjectiveArray[i]);
+    } 
+    else {
+        if ((foodArray[i].charAt(foodArray[i].length-1))==='s'){
+            console.log(foodArray[i]+" are "+adjectiveArray[i]);
+        } else{
+            console.log(foodArray[i]+" is  "+adjectiveArray[i]);
+        }
+    }
+}
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
-const operations = [];
-function doMath() {};
+const operations = ["+","-","*","/"];
+            
+var randomNum = Math.floor(Math.random() * 4);
 
-
+function doMath(a,b) {
+    if (operations[randomNum] == "+"){
+        console.log (`Addition : ${a} ${operations[randomNum]} ${b} = ${a+b}`);
+        return(a+b);
+    }
+    else if (operations[randomNum] == "-"){
+        console.log(`Subtraction : ${a} ${operations[randomNum]} ${b} = ${a-b}`);
+        return(a-b);
+    }
+    else if (operations[randomNum] == "*"){
+        console.log(`Multiplication : ${a} ${operations[randomNum]} ${b} = ${a*b}`);
+        return(a*b);
+    }
+    else if (operations[randomNum] == "/"){
+        console.log(`Division : ${a} ${operations[randomNum]} ${b} = ${a/b}`);
+        return(a/b);
+    }
+};
+doMath(35,7);

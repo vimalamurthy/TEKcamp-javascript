@@ -8,12 +8,8 @@ const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', '
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to 
 //the console.
 
-//var school1=JSON.stringify(foodArray[foodArray.length -1]);
-
-//var myArray = Object.values(foodArray);
-
 var school = Object.values(foodArray[foodArray.length -1]);
-console.log(school);
+console.log("school : " +school);
 
 const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
 // Using both nameArray and adjectiveArray, make a "for" loop that console.log()'s a sentence for each
@@ -21,12 +17,17 @@ const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','ama
 // "Potatoes are salty", "Lemon is sour".
 
 for (var i=0; i<=foodArray.length-1; i++){
-    console.log("Testing Object Values  " +Object.values(foodArray[i]));
-    console.log("charAt value check " +foodArray[i].charAt(foodArray[i].length-1));
+    if (typeof foodArray[i] === 'object'){
+        var temp= (foodArray[i].school);
+        if (temp.charAt(temp.length-1) !=='s')
+            console.log(temp+" is " +adjectiveArray[i]);
+    } 
+    else {
         if ((foodArray[i].charAt(foodArray[i].length-1))==='s'){
             console.log(foodArray[i]+" are "+adjectiveArray[i]);
         } else{
             console.log(foodArray[i]+" is  "+adjectiveArray[i]);
         }
+    }
 }
 </script>
