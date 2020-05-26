@@ -171,7 +171,24 @@ the 'this' keyword.
 */
 
 //your code...
-
+var aboutMe ={
+    name:"Vimala",
+    age:"44",
+    gender:"female",
+    hobbies:["gardening","travelling"],
+    profession:"student",
+    education:"MCA",
+    learn: function(){
+        return (this.name);
+    },
+    myName: function(){
+        this.fullname = this.name +" Murthy";
+        return this.fullname;
+    }
+};
+console.log(aboutMe);
+console.log(aboutMe.learn());
+console.log(aboutMe.myName());
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of 

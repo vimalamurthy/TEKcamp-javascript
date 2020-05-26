@@ -117,9 +117,8 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
-for (var num=0; num<=10; ){
+for (var num=0; num<=10; num +=3 ){
     console.log(num);
-    num=num+3;
 }
 
 // Problem 9:
