@@ -257,10 +257,18 @@ var myplant={
             console.log(`${this.type} is an ${this.variety[1]} variety of ${this.name}`);
         else 
             console.log(`${this.type} is a ${this.variety[0]} variety of ${this.name}`);
+    },
+    produce: function(value){
+        if (value == this.variety[0])
+            console.log(`The ${this.variety[0]} produces all summer long..`);
+        else if (value == this.variety[1])
+            console.log(`The ${this.variety[1]} produces fast but short time..`);
     }
 };
 myplant.printPlant("Beefsteak",6);
 myplant.printPlant("Cherry", 3);
+myplant.produce("Determinate");
+
 
 /************************************************************* */
 //Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
@@ -272,7 +280,7 @@ function myFav() {
     for (var i=0; i<=2; i++){
         switch (i){
             case 0:
-                console.log(`${dataTypes[i]} - It adds more understanding to display values`);
+                console.log(`${dataTypes[i]} - It adds more understanding to grouping & display values`);
                 break;
             case 1:
                 console.log(`${dataTypes[i]} - all manipulations are possible only with numbers`);
