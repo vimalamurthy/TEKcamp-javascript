@@ -30,9 +30,6 @@ console.log(replacestr);
 // Problem 3:
 // Write a function that declares an array of numbers from one to five and returns another array with the squared value 
 //of each number from the first array. Use an arrow function and one of the built-in array methods. 
-
-
-
 //your code...
 
 
@@ -46,8 +43,6 @@ console.log(replacestr);
 //program that returns an array of the numbers that are greater than 3. Use an arrow function and one of the built-in 
 //array methods.
 
-
-
 //your code...
 
 
@@ -59,8 +54,6 @@ console.log(replacestr);
 // Problem 5:
 // Now declare another array of numbers that has any 5 numbers. Write a JavaScript program that returns the sum of those 
 //numbers. Use an arrow function and one of the built-in array methods. 
-
-
 
 //your code...
 
@@ -75,8 +68,6 @@ console.log(replacestr);
 
 // Write a function that takes in a DNA string as a parameter and returns an array with the complementary strand. For 
 //example, a string of "GCTA" would return an array of ["C", "G", "A", "T"].  
-
-
 
 //your code...
 

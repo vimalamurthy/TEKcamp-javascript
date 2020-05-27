@@ -50,40 +50,88 @@ console.log("The result is : " +product1(product()));
 // undefined
 // ""
 var value = 20;
-console.log(`${value} is truthy - value of 20 assigned is truthy`);
+if (value){
+    console.log(`${value} is truthy - value of 20 assigned is truthy`);
+} else{
+    console.log(`${value} is falsy`);
+}
 
 value=0;
-console.log(`${value} is falsy - value of 0 is falsy`);
+if (value){
+    console.log(`${value} is truthy`);
+} else{
+    console.log(`${value} is falsy - value of 0 is falsy`);
+}
 
 value="zero";
-console.log(`${value} is truthy - "zero" is a string`);
-    
+if (value){
+    console.log(`${value} is truthy - "zero" is a string`);
+} else {
+    console.log(`${value} is falsy`);
+}
+
 const zero = 20;
-console.log(`${value} is truthy - 20 is the value of constant named zero`);
+if (value){
+    console.log(`${value} is truthy - 20 is the value of constant named zero`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value=null;
-console.log(`${value} is falsy - null is falsy`);
+if (value){
+    console.log(`${value} is truthy`);
+} else {
+    console.log(`${value} is falsy - null is falsy`);
+}
     
 value="0";
-console.log(`${value} is truthy ="0" is a string`);
+if (value){
+    console.log(`${value} is truthy ="0" is a string`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value= !"";
-console.log(`${value} is truthy - Empty string returns falsy, so the !"" Boolean returns true.`);
+if (value){
+    console.log(`${value} is truthy - Empty string returns falsy, so the !"" Boolean returns true.`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value={};
-console.log(`${value} is truthy - Object is assigned to value`);
+if (value){
+    console.log(`${value} is truthy - Object is assigned to value`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value = () => {console.log("hello TEKcamp!");}
-console.log(`${value} is truthy - Function return value is assigned to value`);
+if (value){
+    console.log(`${value} is truthy - Function return value is assigned to value`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value=125;
-console.log(`${value} is truthy - Assigning a value to the variable`);
+if (value){
+    console.log(`${value} is truthy - Assigning a value to the variable`);
+} else {
+    console.log(`${value} is falsy`);
+}
 
 value=undefined;
-console.log(`${value} is falsy - undefined is falsy`);
+if (value){
+    console.log(`${value} is truthy`);
+} else {
+    console.log(`${value} is falsy - value that is undefined is falsy`);
+}
 
 value="";
-console.log(`${value} is falsy - Empty string is falsy`);
+if (value){
+    console.log(`${value} is truthy`);
+} else {
+    console.log(`${value} is falsy - Empty string is falsy`);
+}
 
 /************************************************************* */
 // Problem 4:
@@ -245,11 +293,26 @@ myFav();
 
 //your code...
 
+function multiple(x){
+    return function fn(y){
+        return (x*y);
+    }
+}
+var result=multiple(5)(3);
+console.log(`The result : ${result}`);
 
 // 2. Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
 
 //your code...
-
-
+function stockGain(basis){
+    let message =" is how much the stock has increased";
+    return function(yrs){
+        let r =.05;
+        console.log(`${(basis*r*yrs)}${message}`);
+        return (basis*r*yrs);
+    }
+}
+futureValue = stockGain(100)(2);
+console.log(`Future value of the stock is ${futureValue}`);
