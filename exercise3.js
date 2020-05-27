@@ -5,26 +5,25 @@
 // Problem 1:
 // Write a JavaScript function that determines whether a string is empty. If the string is empty, the output should be 
 //true, otherwise it should return false. 
-
-
-
 //your code...
-
-
-
-
+function emptyString(str){
+    if (str=="")
+        console.log("true");
+    else
+        console.log("false");
+}
+emptyString("");
 
 /************************************************************* */
 
 // Problem 2:
 // Declare a variable that holds a string (e.g., ‘Learning JavaScript is fun!’). Replace a word so that the output 
 //uses the new word instead (e.g., ‘Learning JavaScript is cool!). 
-
-
-
 //your code...
 
-
+var str ="Learning JavaScript is fun!";
+var replacestr=str.replace("fun","cool");
+console.log(replacestr);
 
 
 /************************************************************* */

@@ -179,16 +179,18 @@ var aboutMe ={
     profession:"student",
     education:"MCA",
     learn: function(){
-        return (this.name);
-    },
-    myName: function(){
         this.fullname = this.name +" Murthy";
-        return this.fullname;
+        return (this.fullname);
+    },
+    printHobby: function(){
+        this.fullname = this.name +" Murthy";
+        console.log(`Hobbies of ${this.name} are `);
+        for (var i=0; i<this.hobbies.length; i++)
+            console.log(`\t ${this.hobbies[i]} `);
     }
 };
-console.log(aboutMe);
-console.log(aboutMe.learn());
-console.log(aboutMe.myName());
+console.log(`My name is ${aboutMe.learn()}`);
+aboutMe.printHobby();
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of 
@@ -196,14 +198,44 @@ console.log(aboutMe.myName());
 //to one of the properties you defined on this object literal.  
 
 //your code...
-
-
+var myplant={
+    name:"Tomato",
+    variety:["Determinate","Indeterminate"],
+    isFruit:true,
+    printPlant: function(str, ht){
+        this.type=str;
+        this.height=ht;
+        if (this.height>=5)
+            console.log(`${this.type} is an ${this.variety[1]} variety of ${this.name}`);
+        else 
+            console.log(`${this.type} is a ${this.variety[0]} variety of ${this.name}`);
+    }
+};
+myplant.printPlant("Beefsteak",6);
+myplant.printPlant("Cherry", 3);
 
 /************************************************************* */
 //Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
 
 //your code...
-
+var dataTypes = ["String", "Number" ,"Object"];
+function myFav() {
+ 
+    for (var i=0; i<=2; i++){
+        switch (i){
+            case 0:
+                console.log(`${dataTypes[i]} - It adds more understanding to display values`);
+                break;
+            case 1:
+                console.log(`${dataTypes[i]} - all manipulations are possible only with numbers`);
+                break;
+            case 2:
+                console.log(`${dataTypes[i]} - a data structure that takes programming to the next level`);
+                break;
+        }
+    }
+}
+myFav();
 
 
 /************************************************************* */
