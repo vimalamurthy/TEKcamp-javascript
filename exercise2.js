@@ -71,7 +71,7 @@ if (value){
 }
 
 const zero = 20;
-if (value){
+if (zero){
     console.log(`${value} is truthy - 20 is the value of constant named zero`);
 } else {
     console.log(`${value} is falsy`);
