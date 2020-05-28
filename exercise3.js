@@ -31,11 +31,19 @@ console.log(replacestr);
 // Write a function that declares an array of numbers from one to five and returns another array with the squared value 
 //of each number from the first array. Use an arrow function and one of the built-in array methods. 
 //your code...
-
-
-
-
-
+function calculate(){
+    let arr=[];
+    let sqArr=[];
+    let z= (x) => x*x;
+    for (let i=0; i<=5; i++){
+      arr.push([i]);
+      let temp=z(arr[i]);
+      sqArr.push(temp);
+    }
+    console.log("The array " +arr);
+    console.log("Output Array " +sqArr);
+  }  
+  calculate();
 
 /************************************************************* */
 // Problem 4:
@@ -45,10 +53,14 @@ console.log(replacestr);
 
 //your code...
 
-
-
-
-
+let numArr=[1,3,5,7,9,1,3,5];
+let newArr=[];
+let temp;
+let z= (x) => {if (x>3) {newArr.push(x)} };
+for (let i=0; i<=numArr.length-1; i++){
+  let val = z(numArr[i]);
+}
+console.log("The Output Array " +newArr);
 
 /************************************************************* */
 // Problem 5:
