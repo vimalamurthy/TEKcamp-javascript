@@ -157,10 +157,18 @@ let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  It should 
 //return the output of the callback function.
 
-function performer(cb) {
-    //code goes here
-}
+//This performs a square function
 
+function performer(cb){
+  var i=5;
+  var temp = (cb(i));
+  return temp;
+}
+function sqfunc(x){
+  return x*x;
+}
+var result=performer(sqfunc);
+console.log(result);
 
 /************************************************************* */
 //Bonus assignment:
