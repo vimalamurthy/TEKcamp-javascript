@@ -69,10 +69,14 @@ console.log("The Output Array " +newArr);
 
 //your code...
 
-
-
-
-
+let myArr=[];
+let sum =0;
+let z= (x) => sum+=x;
+for (let i=0; i<5; i++){
+  myArr.push(Math.floor(Math.random()*100));
+  z(myArr[i]);
+}
+console.log(`The input array is ${myArr} and the sum is ${sum}`);
 
 /************************************************************* */
 // Problem 6:
@@ -83,10 +87,18 @@ console.log("The Output Array " +newArr);
 
 //your code...
 
-
-
-
-
+let newString ="GCTA";
+let newArr=[];
+for (let i=0; i<newString.length; i++){
+  newArr[i]=newString.charAt(i);
+}
+console.log("The input string is : " +newString);
+for (let i=0; i<newArr.length; i+=2){
+  let temp=newArr[i];
+  newArr[i]=newArr[i+1];
+  newArr[i+1]=temp;
+}
+console.log("The complementary array is : " +newArr);
 
 /************************************************************* */
 // Problem 7:
@@ -134,7 +146,11 @@ console.log(mapObj.has({company : "TEKsystems"}));
 
 let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
-
+    let reverseArr=[];
+    for (let i=ones.length-1; i>=0; i--){
+        reverseArr.push(ones[i]);
+    }
+    console.log(reverseArr);
 
 /************************************************************* */
 //Problem 12:
