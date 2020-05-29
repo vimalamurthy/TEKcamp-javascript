@@ -115,22 +115,24 @@ var parsedArray=[];
 function maxNumber(numbers) {
   
   let max=0;
-  let dataArray=["one", "two", "three", "3"];
+  let dataArray=["one", "two", "three"];
 
   for (let i=0; i<numbers.length; i++){
-    if (typeof numbers[i] === 'number'){
+    if (numbers[i]==="3"){
+       parsedArray.push(parseInt(numbers[i]));
+    }
+    else if (typeof numbers[i] === 'number'){
       parsedArray.push(numbers[i]);
     }  
     else if (typeof numbers[i] === 'string'){
        for (let j=0; j<dataArray.length; j++){
           if (numbers[i]==dataArray[j]){
-             parsedArray.push(numbers[i]);
+             parsedArray.push(j++);
           }
        }
-    }
-    
+    } 
   }
-  
+  console.log(`The parsed Array is ${parsedArray}`);
   for (let i=0; i<parsedArray.length; i++){
       if((parsedArray[i]>max)||(parseInt(parsedArray[i]>max))){
         max=parsedArray[i];
@@ -143,7 +145,6 @@ function maxNumber(numbers) {
         }
       }
     }
-      console.log(`The parsedArray is ${parsedArray}`);
       console.log(`Max Value is ${max}`);
   }
       
@@ -153,8 +154,8 @@ maxNumber(numbers);
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
 function sortNums(numbers,desc=false) {
-  numbers.sort(function(a, b){return a - b});
-  console.log(numbers);
+  numbers.sort(function(a, b){return b - a});
+  console.log(`The Array in descending order is ${numbers}`);
 };
 sortNums(parsedArray);
 
@@ -163,16 +164,34 @@ sortNums(parsedArray);
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the 
 //value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
+
 const mapObj = new Map();
 mapObj.set({company : "TEKsystems"},"object");
-
+mapObj.set("Vimala", "String");
+mapObj.set(1, "Number");
+mapObj.set(true, "Boolean");
+mapObj.set([1,2,3], "Arrays");
 
 console.log(mapObj.has({company : "TEKsystems"}));  
+console.log(mapObj.has(Object.company));
+// to return the object in the map
+let mapIter1 = mapObj.entries()
+console.log(mapIter1.next().value)  
+
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of 
 //code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} 
 //exists in the mapObj.
 
-//your code...
+let resultArr=[];
+var mapIter = mapObj.values();
+resultArr.push(mapIter.next().value); 
+resultArr.push(mapIter.next().value); 
+resultArr.push(mapIter.next().value); 
+resultArr.push(mapIter.next().value); 
+resultArr.push(mapIter.next().value); 
+
+console.log(` The result Array is :  ${resultArr}`);
+
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  
 //Use array methods to do this.  Example output : ['string',number','boolean',array','object']
