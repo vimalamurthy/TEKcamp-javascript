@@ -231,8 +231,7 @@ console.log("The add function returns : " +addresult);
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what 
 //the feature is and why it is useful.
 
-//ES6 Multiline Strings using backtick;
-
+console.log("Use of the Multiline Strings using backtick in ES6\n");
 var poem = `The woods are lovely, dark and deep,
 But I have promises to keep,
 And miles to go before I sleep,
