@@ -21,9 +21,14 @@ emptyString("");
 //uses the new word instead (e.g., ‘Learning JavaScript is cool!). 
 //your code...
 
-var str ="Learning JavaScript is fun!";
-var replacestr=str.replace("fun","cool");
-console.log(replacestr);
+    var str =prompt("Enter the string");
+    var word=prompt("Which word to replace");
+    var replaceWord=prompt("Word to be replaced with: ");
+    if (str.indexOf(word))
+        var replacestr=str.replace(word, replaceWord);
+    else
+        console.log("The input string doesnt have the word to be replaced");
+    console.log(replacestr);
 
 
 /************************************************************* */
@@ -123,44 +128,25 @@ function maxNumber(numbers) {
           }
        }
     }
+    
   }
   
   for (let i=0; i<parsedArray.length; i++){
       if((parsedArray[i]>max)||(parseInt(parsedArray[i]>max))){
         max=parsedArray[i];
       }
-      else if (parsedArray[i]=="3") {
-        let temp= 3;
-        parsedArray[i]=temp;
-        if (temp>max){
-          max=temp;
-        }
-      }
-      else if (parsedArray[i]=="one"){
-        let temp=1;
-        parsedArray[i]=temp;
-        if (temp>max){
-          max=temp;
-        }
-      }
-      else if (parsedArray[i]=="two"){
-        let temp=2;
-        parsedArray[i]=temp;
-        if (temp>max){
-          max=temp;
-        }
-      }
-      else if (parsedArray[i]=="three"){
-        let temp=3;
-        parsedArray[i]=temp;
-        if (temp>max){
-          max=temp;
+      for (let j=0; j<dataArray.length; j++){
+        if (parsedArray[i]== dataArray[j]){
+          let temp=dataArray[j];
+          parsedArray[i]=temp;
+          if (temp>max){ max = temp; }
         }
       }
     }
-  console.log(`The parsedArray is ${parsedArray}`);
-  console.log(`Max Value is ${max}`);
-}
+      console.log(`The parsedArray is ${parsedArray}`);
+      console.log(`Max Value is ${max}`);
+  }
+      
 maxNumber(numbers);
 
 
