@@ -109,8 +109,52 @@ console.log("The complementary array is : " +newArr);
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
 function maxNumber(numbers) {
-    //your code...
+  let parsedArray=[];
+  let max=0;
+  console.log(`${numbers.length} length of ${numbers}`);
+  for (let i=0; i<numbers.length; i++){
+    if ((typeof numbers[i] === 'string') || (typeof numbers[i] === 'number')){
+        parsedArray.push(numbers[i]);
+    }
+  }
+  console.log(+parsedArray.length +" the array is " +parsedArray);
+  for (let i=0; i<parsedArray.length; i++){
+      if((parsedArray[i]>max)||(parseInt(parsedArray[i]>max))){
+        max=parsedArray[i];
+      }
+      else if (parsedArray[i]=="3") {
+        let temp= 3;
+        parsedArray[i]=temp;
+        if (temp>max){
+          max=temp;
+        }
+      }
+      else if (parsedArray[i]=="one"){
+        let temp=1;
+        parsedArray[i]=temp;
+        if (temp>max){
+          max=temp;
+        }
+      }
+      else if (parsedArray[i]=="two"){
+        let temp=2;
+        parsedArray[i]=temp;
+        if (temp>max){
+          max=temp;
+        }
+      }
+      else if (parsedArray[i]=="three"){
+        let temp=3;
+        parsedArray[i]=temp;
+        if (temp>max){
+          max=temp;
+        }
+      }
+    }
+  console.log(`Max Value is ${max}`);
+  console.log(`The Parsed Array is ${parsedArray}`);
 }
+maxNumber(numbers);
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
@@ -167,10 +211,23 @@ function performer(cb){
 function sqfunc(x){
   return x*x;
 }
+function addfunc(x){
+  return x+x;
+}
 var result=performer(sqfunc);
-console.log(result);
+console.log("The square function returns : " +result);
+var addresult=performer(addfunc);
+console.log("The add function returns : " +addresult);
 
 /************************************************************* */
 //Bonus assignment:
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what 
 //the feature is and why it is useful.
+
+//ES6 Multiline Strings using backtick;
+
+var poem = `The woods are lovely, dark and deep,
+But I have promises to keep,
+And miles to go before I sleep,
+And miles to go before I sleep` ;
+console.log(poem);
