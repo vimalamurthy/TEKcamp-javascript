@@ -102,22 +102,29 @@ console.log("The complementary array is : " +newArr);
 
 /************************************************************* */
 // Problem 7:
-
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  
 //Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to 
 //perform this task.  
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
-
+var parsedArray=[];
 function maxNumber(numbers) {
-  let parsedArray=[];
+  
   let max=0;
-  console.log(`${numbers.length} length of ${numbers}`);
+  let dataArray=["one", "two", "three", "3"];
+
   for (let i=0; i<numbers.length; i++){
-    if ((typeof numbers[i] === 'string') || (typeof numbers[i] === 'number')){
-        parsedArray.push(numbers[i]);
+    if (typeof numbers[i] === 'number'){
+      parsedArray.push(numbers[i]);
+    }  
+    else if (typeof numbers[i] === 'string'){
+       for (let j=0; j<dataArray.length; j++){
+          if (numbers[i]==dataArray[j]){
+             parsedArray.push(numbers[i]);
+          }
+       }
     }
   }
-  console.log(+parsedArray.length +" the array is " +parsedArray);
+  
   for (let i=0; i<parsedArray.length; i++){
       if((parsedArray[i]>max)||(parseInt(parsedArray[i]>max))){
         max=parsedArray[i];
@@ -151,19 +158,19 @@ function maxNumber(numbers) {
         }
       }
     }
+  console.log(`The parsedArray is ${parsedArray}`);
   console.log(`Max Value is ${max}`);
-  console.log(`The Parsed Array is ${parsedArray}`);
 }
 maxNumber(numbers);
+
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
 function sortNums(numbers,desc=false) {
-    //your code...
+  numbers.sort(function(a, b){return a - b});
+  console.log(numbers);
 };
-
-
-
+sortNums(parsedArray);
 
 /************************************************************* */
 // Problem 8:
