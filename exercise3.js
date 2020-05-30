@@ -166,32 +166,29 @@ sortNums(parsedArray);
 
 
 const mapObj = new Map();
-mapObj.set({company : "TEKsystems"},"object");
+let comp = {company : "TEKsystems"};
+mapObj.set(comp,"object");
 mapObj.set("Vimala", "String");
 mapObj.set(1, "Number");
 mapObj.set(true, "Boolean");
 mapObj.set([1,2,3], "Arrays");
 
-console.log(mapObj.has({company : "TEKsystems"}));  
-console.log(mapObj.has(Object.company));
-// to return the object in the map
-let mapIter1 = mapObj.entries()
-console.log(mapIter1.next().value)  
+console.log(mapObj.has(comp));  
+console.log(`The object wasn't initialized using new Object() or Object.create() before it was set into the Map Object`);
 
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of 
 //code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} 
 //exists in the mapObj.
 
+//loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  
+//Use array methods to do this.  Example output : ['string',number','boolean',array','object']
+
 let resultArr=[];
 var mapIter = mapObj.values();
-resultArr.push(mapIter.next().value); 
-resultArr.push(mapIter.next().value); 
-resultArr.push(mapIter.next().value); 
-resultArr.push(mapIter.next().value); 
-resultArr.push(mapIter.next().value); 
+mapObj.forEach((value,key) =>
+    resultArr.push(mapIter.next().value));
 
 console.log(` The result Array is :  ${resultArr}`);
-
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  
 //Use array methods to do this.  Example output : ['string',number','boolean',array','object']
