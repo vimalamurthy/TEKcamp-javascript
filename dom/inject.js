@@ -1,22 +1,3 @@
-/*Exercise instructions : take the html code from the following codepen 
-
-    <center>
-        <h1><i>HTML Practice Exercise TEKcamp.</i></h1>
-        <h2><a href="">TEKsystems "TEKcamp"</a></h2>
-    </center>
-  
-    <hr/>
-    <p>I love <i>HTML</i> for the following reasons:</p>
-    <ol>
-       <li>I learned it quickly.</li>
-       <li>I can make web pages using code
-       <li> It’s fun.</li>
-    </ol>
-    <hr />
-        <p>My instructor’s email address is: <a href="mailto:ayunas@teksystems.com">ayunas@teksystems.com</a>.</p>
-    <h1>Have a great day!</h1>  I really look forward to learning how to code!  Have a great day.  
-        -[Team "Git'er Done"]
-*/
 
 const inject = document.querySelector('#inject');
 
@@ -28,19 +9,16 @@ h1.style.fontStyle = "italic";
 h1.style.textAlign = "center";
 inject.appendChild(h1);
 
-//Adding second h1
-const head1 = document.createElement('h1');
+
+const h2 = document.createElement('h2');
+h2.style.textAlign = "center";
 const a = document.createElement('a');
 const link = document.createTextNode("TEKsystems \"TEKcamp\"");
-head1.textAlign ="center";
-a.style.textAlign = "center";
-a.style.fontStyle = "italic";
-link.textAlign="center";
 a.href = "https://teksystems.tahoe.appsembler.com/";
 
-head1.appendChild(a);
 a.appendChild(link);
-inject.appendChild(a);
+h2.appendChild(a);
+inject.appendChild(h2);
 
 //Adding break line
 const hr=document.createElement('hr');
@@ -49,9 +27,14 @@ inject.appendChild(hr);
 
 //Adding the para
 const para = document.createElement('p');
-const str1="HTML";
-const str = str1.italics();
-para.textContent = "I love " +str +" for the following reasons:";
+const span=document.createElement('span');
+const span1=document.createElement('span')
+span.textContent="HTML";
+span.style.fontStyle="italic";
+para.textContent="I love ";
+span1.textContent=" for the following reasons: ";
+para.appendChild(span);
+para.appendChild(span1);
 inject.appendChild(para);
 
 //Adding the ordered list
@@ -90,5 +73,5 @@ const heading = document.createElement('h1');
 heading.textContent = "Have a great day!";
 inject.appendChild(heading);
 
-const text = document.createTextNode(' I really look forward to learning how to code!  Have a great day.  -[Team \"Git\'er Done\"]');
+const text = document.createTextNode('I really look forward to learning how to code!  Have a great day.  -[Team \"Git\'er Done\"]');
 inject.appendChild(text);
