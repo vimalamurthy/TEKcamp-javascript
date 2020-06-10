@@ -6,73 +6,108 @@
 // Part 2: Write another funciton that converts the Celsius temperature back to Fahrenheit. 
 
 //your code...
+//Part 1 - Farenheit to Celsius
+var farenheit = prompt("Enter farenheit temperature: ");
+var celsius = (farenheit-32)*(5/9);
+console.log(farenheit +" F is : " +celsius + " C");
 
-
-
-
-
+//Part 2 - Celsius to farenheit
+var celsius1 = prompt("Enter Celsius temperature");
+var farenheit1= (celsius*(9/5))+32;
+console.log(celsius1 +" C is : " +farenheit1 + " F");
 
 /************************************************************* */
 // Problem 2:
-// Write a JavaScript function to determine if someone is old enough to vote. Declare a variable for age and write a conditional statement for whether that age is old enough to vote. Console log "yes" or "no"
+// Write a JavaScript function to determine if someone is old enough to vote. Declare a variable for age and write a conditional statement 
+//for whether that age is old enough to vote. Console log "yes" or "no"
 
 //your code...
-
-
-
-
-
-
+var age=prompt("Whats your age: " )
+if (age >= 18){
+    console.log("You can vote..")
+}
+else{
+    console.log("You can't vote yet..")
+}
 
 /************************************************************* */
 // Problem 3:
-// Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
+// Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." 
+//Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you 
+//have finished, use the join() method to change the array back into a string.
 
 //your code...
-
-
-
-
-
-
+var myString= "The five boxing wizards jump quickly.";
+var myArray = myString.split(" ");
+console.log("The Array is : " +myArray);
+myString=myArray.join(" ");
+console.log("The string is : " +myString);
 
 /************************************************************* */
 // Problem 4:
-// Write a JavaScript function with a function that reverses your telephone number. Use the split() and join() methods from the previous problem as well as the toString() method to convert a number into a string and reverse() method to reverse an array in place.
+// Write a JavaScript function with a function that reverses your telephone number. Use the split() and join() methods from the previous 
+//problem as well as the toString() method to convert a number into a string and reverse() method to reverse an array in place.
 
 //your code...
-
-
-
-
+function reverseNum(phoneNumber){
+    var strPhNum = phoneNumber.toString();
+    var arrPhNum= strPhNum.split("");
+    var reverseNum = arrPhNum.reverse();
+    return(reverseNum.join(""));
+}
+var acceptNum=prompt("Enter the phone number without spaces: ");
+console.log(reverseNum(acceptNum));
 
 /************************************************************* */
 // Problem 5:
-// Write a JavaScript function creates a car object using information about your car. Include the make, model, year, and color. Write a function to get the year, color, make, and model in that order.
+// Write a JavaScript function creates a car object using information about your car. Include the make, model, year, and 
+// color. Write a function to get the year, color, make, and model in that order.
 
 //your code...
-
-
-
-
-
+var car ={
+    make: 'BMW',
+    model:'525',
+    year: 2019,
+    color:'red',
+    getCar: function(){
+        console.log(this);
+    }
+};
+car.getCar();
 
 /************************************************************* */
 // Problem 6:
-// Write a JavaScript function with a loop that will iterate from 0 to 15. Each iteration, the for loop will check if the current number is odd or even and display the output.
-
+// Write a JavaScript function with a loop that will iterate from 0 to 15. Each iteration, the for loop will check if the 
+// current number is odd or even and display the output.
 
 //your code...
-
-
-
+for (var num=0; num<=15; num++){
+    if ((num%2) == 0)
+        console.log(num +" is an even number");
+    else
+        console.log(num +" is an odd number");
+}
 
 /************************************************************* */
 // Problem 7:
-// Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
+// Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the 
+// number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
-
+for (var num=1; num<=100; num++){
+    if(((num%3)==0) && ((num%5)==0)){
+        console.log("TEKcamp");
+    }
+    else if ((num%5) == 0){
+        console.log("Camp");
+    }
+    else if ((num%3)==0){
+        console.log("TEK");
+    }
+    else{
+        console.log(num);
+    }
+}
 
 /************************************************************* */
 // Problem 8:
@@ -82,21 +117,61 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
-
-
+for (var num=0; num<=10; num +=3 ){
+    console.log(num);
+}
 
 // Problem 9:
 const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];
-//access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
+//access the value of the last element of the array and set it to a variable called school.  print the school variable to 
+//the console.
+var school = Object.values(foodArray[foodArray.length -1]);
+console.log(school);
 
 const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
-// Using both nameArray and adjectiveArray, make a
-// "for" loop that console.log()'s a sentence for each
-// corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
+// Using both nameArray and adjectiveArray, make a "for" loop that console.log()'s a sentence for each
+// corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  
+// "Potatoes are salty", "Lemon is sour".
+
+for (var i=0; i<=foodArray.length-1; i++){
+    if (typeof foodArray[i] === 'object'){
+        var temp= (foodArray[i].school);
+        if (temp.charAt(temp.length-1) !=='s')
+            console.log(temp+" is " +adjectiveArray[i]);
+        else
+            console.log(temp+" are " +adjectiveArray[i]);
+    } 
+    else {
+        if ((foodArray[i].charAt(foodArray[i].length-1))==='s'){
+            console.log(foodArray[i]+" are "+adjectiveArray[i]);
+        } else{
+            console.log(foodArray[i]+" is  "+adjectiveArray[i]);
+        }
+    }
+}
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
-const operations = [];
-function doMath() {};
+const operations = ["+","-","*","/"];
+            
+var randomNum = Math.floor(Math.random() * 4);
 
-
+function doMath(a,b) {
+    if (operations[randomNum] == "+"){
+        console.log (`Addition : ${a} ${operations[randomNum]} ${b} = ${a+b}`);
+        return(a+b);
+    }
+    else if (operations[randomNum] == "-"){
+        console.log(`Subtraction : ${a} ${operations[randomNum]} ${b} = ${a-b}`);
+        return(a-b);
+    }
+    else if (operations[randomNum] == "*"){
+        console.log(`Multiplication : ${a} ${operations[randomNum]} ${b} = ${a*b}`);
+        return(a*b);
+    }
+    else if (operations[randomNum] == "/"){
+        console.log(`Division : ${a} ${operations[randomNum]} ${b} = ${a/b}`);
+        return(a/b);
+    }
+};
+doMath(35,7);
